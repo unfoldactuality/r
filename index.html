@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UnfoldActuality — Exploring what is actually true, within us and around us.">
+  <title>UnfoldActuality</title>
+
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --text: #171717;
+      --muted: #6b6b67;
+      --line: #deded8;
+      --card: #ffffff;
+      --card-hover: #f0f0eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: 620px;
+      min-height: 100vh;
+      padding: 56px 20px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .brand {
+      text-align: center;
+    }
+
+    .brand-name {
+      font-size: clamp(2rem, 9vw, 3.25rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+    }
+
+    .tagline {
+      max-width: 500px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: clamp(0.98rem, 4vw, 1.12rem);
+      line-height: 1.55;
+      letter-spacing: -0.01em;
+    }
+
+    .languages {
+      width: 100%;
+      margin-top: 42px;
+      display: grid;
+      gap: 13px;
+    }
+
+    .language-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      padding: 16px 19px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--text);
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease, border-color 160ms ease;
+    }
+
+    .language-card:hover,
+    .language-card:focus-visible {
+      background: var(--card-hover);
+      border-color: #c9c9c2;
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .language-card:focus-visible {
+      box-shadow: 0 0 0 3px rgba(23, 23, 23, 0.12);
+    }
+
+    .language-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .language-name {
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+
+    .language-description {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .arrow {
+      font-size: 1.35rem;
+      line-height: 1;
+      margin-left: 16px;
+    }
+
+    .socials {
+      width: 100%;
+      margin-top: 26px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .social-link {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.94rem;
+      background: transparent;
+      transition: background 160ms ease, border-color 160ms ease;
+    }
+
+    .social-link:hover,
+    .social-link:focus-visible {
+      background: var(--card);
+      border-color: #c9c9c2;
+      outline: none;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 54px;
+      color: #8a8a84;
+      text-align: center;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 420px) {
+      main {
+        padding: 42px 16px 26px;
+      }
+
+      .tagline {
+        margin-top: 15px;
+      }
+
+      .languages {
+        margin-top: 34px;
+      }
+
+      .language-card {
+        min-height: 64px;
+        padding: 14px 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .language-card,
+      .social-link {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header class="brand">
+      <h1 class="brand-name">UnfoldActuality</h1>
+      <p class="tagline">
+        Exploring what is actually true — within us and around us.
+      </p>
+    </header>
+
+    <nav class="languages" aria-label="Choose language">
+      <a class="language-card" href="/blog/">
+        <span class="language-info">
+          <span class="language-name">English</span>
+          <span class="language-description">Explore the blog</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="language-card" href="/bn/">
+        <span class="language-info">
+          <span class="language-name">বাংলা</span>
+          <span class="language-description">বাংলায় অনুসন্ধান করুন</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="language-card" href="/hn/">
+        <span class="language-info">
+          <span class="language-name">हिन्दी</span>
+          <span class="language-description">हिन्दी में खोजें</span>
+        </span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+    <section class="socials" aria-label="Social links">
+      <!-- Replace # with your actual social profile URLs when ready. -->
+      <a class="social-link" href="#" aria-label="Social media">Social Media</a>
+      <a class="social-link" href="/blog/">Latest from UnfoldActuality</a>
+    </section>
+
+    <footer>
+      © <span id="year"></span> UnfoldActuality
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
