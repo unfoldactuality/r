@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About UnfoldActuality — Exploring what is actually true, within us and around us.">
+<title>About Us — UnfoldActuality</title>
+<style>
+:root{--bg:#f7f7f4;--text:#171717;--muted:#6b6b67;--line:#deded8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+main{width:100%;max-width:620px;min-height:100vh;margin:auto;padding:42px 20px 32px;display:flex;flex-direction:column}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+a{color:var(--text);text-decoration:none}
+.brand-link{font-size:1.05rem;font-weight:700;letter-spacing:-.025em}
+.back-link{color:var(--muted);font-size:.88rem}
+.content{padding:52px 0 20px}
+h1{font-size:clamp(2rem,9vw,3rem);line-height:1.05;letter-spacing:-.055em;margin-bottom:34px}
+.content p{color:#353532;font-size:1.03rem;line-height:1.75;margin-bottom:22px}
+.content .lead{font-size:1.12rem;line-height:1.65}
+.question{margin:8px 0 30px;padding-left:18px;border-left:2px solid #b9b9b2;color:var(--text)!important;font-size:clamp(1.22rem,5vw,1.5rem)!important;line-height:1.5!important}
+.closing{margin-top:10px;padding-top:26px;border-top:1px solid var(--line)}
+footer{margin-top:auto;padding-top:48px;color:#8a8a84;text-align:center;font-size:.78rem;line-height:1.5}
+@media(max-width:420px){main{padding:30px 16px 26px}.topbar{padding-bottom:22px}.content{padding-top:38px}.content p{font-size:1rem;line-height:1.7}h1{margin-bottom:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<header class="topbar">
+<a class="brand-link" href="/">UnfoldActuality</a>
+<a class="back-link" href="/">← Home</a>
+</header>
+<article class="content">
+<h1>About Us</h1>
+<p class="lead">UnfoldActuality is an online initiative born from a simple curiosity:</p>
+<p class="question"><strong>What is actually true — within us and around us?</strong></p>
+<p>We explore the ideas, beliefs, experiences and realities that shape the way we understand ourselves and the world around us.</p>
+<p>Sometimes, that means looking within and understanding ourselves better. Sometimes, it means questioning what we have always believed and looking at it from a different perspective.</p>
+<p>We don’t claim to have all the answers.</p>
+<p>We simply believe that asking better questions, exploring openly, and looking beyond assumptions can help us see things more clearly.</p>
+<div class="closing">
+<p><strong>UnfoldActuality is our journey of exploring what is actually true — within us and around us.</strong></p>
+</div>
+</article>
+<footer>© <span id="year"></span> UnfoldActuality</footer>
+</main>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
